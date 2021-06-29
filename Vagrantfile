@@ -67,34 +67,23 @@ Vagrant.configure("2") do |config|
         dnf install httpd -y
 	    systemctl enable --now httpd.service
 		cd /home/vagrant/Paquetes
-	 
-		sudo   	yum -y install curl 
+	 	sudo   	yum -y install curl 
 		yum install -y  zip unzip
 		sudo dnf install -y php-common-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
-		udo dnf install -y  php-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
-		
+		sudo dnf install -y  php-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
 		sudo dnf install -y php-gd-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
-		
 		sudo dnf install -y php-mbstring-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
-		
-	sudo dnf install -y 	php-pecl-zip-1.18.2-1.module+el8.3.0+7685+72d70b58.x86_64.rpm
-sudo dnf install -y php-pdo-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
-
-sudo dnf install -y php-cli-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
-sudo dnf install -y php-json-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
-sudo dnf install -y php-xml-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
- sudo dnf install -y libzip-1.5.1-2.module+el8.1.0+5433+f869f572.x86_64.rpm
- 
-		sudo systemctl restart httpd.service
+	    sudo dnf install -y php-pdo-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
+     	sudo dnf install -y php-cli-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
+	    sudo dnf install -y php-json-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
+	    sudo dnf install -y php-xml-7.4.6-4.module+el8.3.0+7685+72d70b58.x86_64.rpm
+	    sudo systemctl restart httpd.service
 		curl -sS https://getcomposer.org/installer | php
 		sudo mv composer.phar /usr/bin/composer
 		chmod +x /usr/bin/composer
 		cd /var/www
 		composer create-project --prefer-dist laravel/laravel blog "5.5.*"
-	 
-	   
-
-   SHELL
+	SHELL
  
 
 end
